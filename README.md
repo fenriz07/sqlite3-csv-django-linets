@@ -1,5 +1,5 @@
 
-##Descripcion
+## Descripción
 
   - Backend escrito en python bajo el framework laravel, el cual lee una base de datos sqlite y genera un csv basado en las instrucciones expuestas.
 
