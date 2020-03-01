@@ -7,6 +7,6 @@
 
 - Clone este repositorio o descargelo
 - Entre al directorio raíz del repositorio. ```cd sqlite3-csv-django-linets```
-- Ejecute ```docker-compose up```
+- Ejecute ```docker-compose up``` ó ```sudo docker-compose up```
 - El proyecto expondrá el puerto ```8000```
 - Abra su explorador favorito y escriba la dirección: ```http://localhost:8000/export```
