@@ -1,16 +1,9 @@
-
-from pprint import pprint
 import csv
 import collections
 from django.views import View
 from Export.models import Products
 from django.http import HttpResponse
 from django.views.generic.detail import SingleObjectMixin
-
-
-
-
-
 
 class ExportAPIView(SingleObjectMixin,View):
 
@@ -36,8 +29,6 @@ class ExportAPIView(SingleObjectMixin,View):
         rowsCsv = []
 
         formato = "|sku=%s,color=%s"
-
-        pprint(collectProducts)            
         
         for model in collectProducts:
            name = ''
@@ -55,7 +46,7 @@ class ExportAPIView(SingleObjectMixin,View):
     def responseCsv(self,rows):
 
            response = HttpResponse(content_type='text/csv')
-           response['Content-Disposition'] = 'attachment; filename="somefilename.csv"'
+           response['Content-Disposition'] = 'attachment; filename="products.csv"'
 
            writer = csv.writer(response)
 
